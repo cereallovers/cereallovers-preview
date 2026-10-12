@@ -3,9 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="robots" content="noindex,nofollow">
 <title>Cereal Lovers</title>
-<meta name="description" content="Cereal Lovers, concept du site 2026. Aperçu privé.">
+<meta name="description" content="Cereal Lovers, Place du Théâtre, Luxembourg : petit-déjeuner toute la journée, café de spécialité, notre granola et la Coffee Lovers Barista Academy.">
 <link rel="icon" href="data:,">
 <link rel="stylesheet" href="fonts.css">
 <style>
@@ -742,7 +741,7 @@ h2{font-size:clamp(44px,7.4vw,108px)}
   <div class="wrap">
     <div class="hero">
       <div class="lc">
-        <p class="eye">COFFEE LOVERS BARISTA ACADEMY &#183; CHEZ CEREAL LOVERS &#183; LUXEMBOURG</p>
+        <p class="eye">COFFEE LOVERS BARISTA ACADEMY &#183; CEREAL LOVERS &#183; LUXEMBOURG</p>
         <h1>Apprenez<br>le café.<br><span class="mark">Vraiment.<svg class="sc dr" viewBox="0 0 500 110" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M 30 68 L 466 28 M 27 88 L 467 49" style="--s:var(--marker);--w:24"/></svg></span></h1>
         <p class="cross"><span class="x">un après-midi sympa avec du lait.<svg class="sc dr" viewBox="0 0 300 40" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M4 26 C 60 14, 120 30, 180 16 S 260 22, 296 12 M 10 14 C 90 24, 190 8, 290 26"/></svg></span><br>
           un vrai cours. avec un programme. sur de vraies machines de café.</p>
@@ -1195,7 +1194,7 @@ h2{font-size:clamp(44px,7.4vw,108px)}
       <div><i style="background:#ef4ea2"></i><span>stylo rose</span><em>#EF4EA2</em></div>
     </div>
     <div class="legal"><span class="heart" aria-hidden="true"></span><span>CEREAL LOVERS S&#192;RL</span><span>11C PLACE DU TH&#201;&#194;TRE &#183; L-2613 LUXEMBOURG</span>
-      <span>HELLO@CEREALLOVERS.LU</span><a href="https://www.instagram.com/cerealloves/" target="_blank" rel="noopener">@CEREALLOVES</a><span>COFFEELOVERS.LU</span><span>FR / EN</span><span>CONCEPT &#183; APERÇU PRIVÉ</span></div>
+      <span>HELLO@CEREALLOVERS.LU</span><a href="https://www.instagram.com/cerealloves/" target="_blank" rel="noopener">@CEREALLOVES</a><span>COFFEELOVERS.LU</span></div>
   </div>
 </footer>
 </div>
@@ -1503,6 +1502,7 @@ h2{font-size:clamp(44px,7.4vw,108px)}
       if(+a === +b){ big = a.getDate()+' '+MONF[a.getMonth()]; small = WDF[a.getDay()]; }
       else if(a.getMonth()===b.getMonth() && a.getFullYear()===b.getFullYear()){ big = a.getDate()+'–'+b.getDate()+' '+MONF[a.getMonth()]; small = WDF[a.getDay()].slice(0,3)+T.to+WDF[b.getDay()].slice(0,3); }
       else { big = a.getDate()+' '+MONF[a.getMonth()]; small = T.until+b.getDate()+' '+MONF[b.getMonth()]+(b.getFullYear()!==a.getFullYear() ? ' '+b.getFullYear() : ''); }
+      small = a.getFullYear()+' · '+small;   // the year on every ticket: the calendar runs into the next year
       return '<article class="tk" style="--c:'+COLS[i%COLS.length]+';--rot:'+ROTS[i%ROTS.length]+'deg">'
         + '<p class="d">'+esc(big)+'<small>'+esc(small)+'</small></p>'
         + '<p class="n">'+esc(L(e.name))+'</p>'

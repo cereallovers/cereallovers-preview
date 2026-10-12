@@ -24,7 +24,7 @@ SWITCH = re.compile(r'\n?\s*<nav class="lang"[^\n]*</nav>')
 FR = [
   # head + header
   ('<html lang="en">', '<html lang="fr">'),
-  ('content="Cereal Lovers 2026 website concept. Private preview."', 'content="Cereal Lovers, concept du site 2026. Aperçu privé."'),
+  ('content="Cereal Lovers, Place du Théâtre, Luxembourg: breakfast all day, specialty coffee, our own granola and the Coffee Lovers Barista Academy."', 'content="Cereal Lovers, Place du Théâtre, Luxembourg : petit-déjeuner toute la journée, café de spécialité, notre granola et la Coffee Lovers Barista Academy."'),
   ('you are here: courses', 'vous êtes ici : les cours'),
   ('<span class="w">Courses</span>', '<span class="w">Cours</span>'),
   ('<span class="w">Wall</span>', '<span class="w">Le mur</span>'),
@@ -42,7 +42,6 @@ FR = [
   ('data-name="cookies"', 'data-name="les cookies"'), ('data-name="visit"', 'data-name="visite"'),
   ('data-name="in town"', 'data-name="en ville"'), ('data-name="see you"', 'data-name="à bientôt"'),
   # hero
-  ('COFFEE LOVERS BARISTA ACADEMY &#183; AT CEREAL LOVERS &#183; LUXEMBOURG', 'COFFEE LOVERS BARISTA ACADEMY &#183; CHEZ CEREAL LOVERS &#183; LUXEMBOURG'),
   ('<h1>Learn<br>coffee.<br><span class="mark">Properly.', '<h1>Apprenez<br>le café.<br><span class="mark">Vraiment.'),
   ('<span class="x">a fun afternoon with some milk.', '<span class="x">un après-midi sympa avec du lait.'),
   ('a real course. with a syllabus. on real café machines.</p>', 'un vrai cours. avec un programme. sur de vraies machines de café.</p>'),
@@ -291,7 +290,6 @@ FR = [
   ('<span>gold</span><em>', '<span>or</span><em>'),
   ('<span>cobalt pen</span><em>', '<span>stylo cobalt</span><em>'),
   ('<span>pink pen</span><em>', '<span>stylo rose</span><em>'),
-  ('<span>CONCEPT &#183; PRIVATE PREVIEW</span>', '<span>CONCEPT &#183; APERÇU PRIVÉ</span>'),
   ('The course list needs JavaScript. Write to hello@cereallovers.lu and we send you everything.',
    'La liste des cours a besoin de JavaScript. Écrivez à hello@cereallovers.lu et on vous envoie tout.'),
 ]
