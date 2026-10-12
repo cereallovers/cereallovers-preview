@@ -1,7 +1,14 @@
 """Makes the French page.
 
-   cereallovers-preview/en.html   the English page, the one to edit       -> /en
-   cereallovers-preview/index.html the French page, made by this script   -> /   (main audience)
+   cereallovers-preview/en.html   the English page, the one to edit
+   cereallovers-preview/index.html made by this script                    -> /
+   cereallovers-preview/fr.html    the French page, made by this script   (only while FRENCH_LIVE is False)
+
+FRENCH_LIVE (below) says whether the French page is public.
+   False (since 12 Oct 2026): English only. index.html is en.html without the FR | EN switch,
+          the French page is still built, as fr.html, and vercel.json sends /fr and /en to /.
+   True:  French at / (index.html), English at /en, with the switch. To go back to this, set it
+          to True, run the script, delete fr.html, and remove the /fr and /en redirects in vercel.json.
 
 Every visible text in en.html is swapped for its French line below. The script stops if a line
 is not found, so after editing en.html run it again and fix the line it names:
@@ -11,6 +18,8 @@ and courses.json carries both languages."""
 import os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.join(HERE, '..', '..', 'cereallovers-preview')
+FRENCH_LIVE = False
+SWITCH = re.compile(r'\n?\s*<nav class="lang"[^\n]*</nav>')
 
 FR = [
   # head + header
@@ -297,8 +306,15 @@ def main():
         head = head.replace(a, b)
     if missing:
         sys.exit('Not found in en.html (changed? update build_fr.py):\n  ' + '\n  '.join(missing))
-    open(os.path.join(SITE, 'index.html'), 'w', encoding='utf-8').write(head + script)
-    print('index.html (FR) written,', len(FR), 'lines swapped')
+    if FRENCH_LIVE:
+        open(os.path.join(SITE, 'index.html'), 'w', encoding='utf-8').write(head + script)
+        print('index.html (FR) written,', len(FR), 'lines swapped')
+        return
+    open(os.path.join(SITE, 'fr.html'), 'w', encoding='utf-8').write(head + script)
+    english, n = SWITCH.subn('', en, count=1)
+    if n != 1: sys.exit('The FR | EN switch was not found in en.html')
+    open(os.path.join(SITE, 'index.html'), 'w', encoding='utf-8').write(english)
+    print('index.html (EN, no switch) and fr.html (FR, hidden) written,', len(FR), 'lines swapped')
 
 if __name__ == '__main__':
     main()

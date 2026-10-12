@@ -6,6 +6,12 @@
 > The other versions and the costs page are kept on the Desktop in `website-2026/preview-other-versions/`
 > and in the GitHub history, so any of them can go back up in a minute.
 
+> **English only for now (12 Oct 2026).** The French page is hidden until we switch it back on.
+> `/` shows the English page without the FR | EN switch; `/en` and `/fr` redirect to `/`. The French page is
+> still built, as `fr.html`, so it stays up to date. One switch turns French back on: `FRENCH_LIVE` in
+> `website-2026/i18n/build_fr.py` (its header says the three steps). The heart logo is in the header (`el/logo.svg`).
+> The "Two languages" notes below describe the site with French switched on.
+
 > **Two languages (7 Oct 2026, boss feedback round):** French is the home page `/` (the main audience),
 > English is `/en`. The FR | EN switch sits at the top right and keeps your place on the page.
 > - `en.html` is the English page and the one to edit.
@@ -33,8 +39,9 @@ Plain HTML, CSS, images and fonts. No build step, no dependencies, no database.
 
 | file | what it is |
 |---|---|
-| `index.html` | the home page in French: Option B, Louder (made from `en.html`, see above) |
-| `en.html` | the same page in English, at `/en`. Edit this one |
+| `index.html` | the home page, made from `en.html` by `build_fr.py`: English for now (French when `FRENCH_LIVE` is on) |
+| `en.html` | the English page. Edit this one |
+| `fr.html` | the French page, built and kept but hidden (redirects to `/`) |
 | `a.html` (kept aside) | **Option A, Ink** — cream paper ground, colour in the marks |
 | `b-september.html` (kept aside) | **Option B, Loud**, the September version — every section a full brand colour |
 | `hands.html` (kept aside) | nine handwriting faces, to settle which pen the site uses |

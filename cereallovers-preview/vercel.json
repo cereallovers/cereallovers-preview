@@ -74,6 +74,16 @@
       "source": "/index",
       "destination": "/",
       "permanent": false
+    },
+    {
+      "source": "/en",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/fr",
+      "destination": "/",
+      "permanent": false
     }
   ]
 }
