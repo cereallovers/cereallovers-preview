@@ -1398,9 +1398,11 @@ h2{font-size:clamp(44px,7.4vw,108px)}
     var label = (same ? WD[a.getDay()]+' '+a.getDate() : WD[a.getDay()]+' '+a.getDate()+'–'+WD[b.getDay()]+' '+b.getDate()) + ' ' + MON[b.getMonth()];
     return {big:big, small:small, label:label, start:a, end:b};
   }
+  // a session closes the day it starts (or earlier, with "closed": true), so nobody signs up for one already running
+  function open(s){ return !s.closed && day(s.start) > TODAY; }
   function upcoming(){
     if(!DATA) return [];
-    return (DATA.sessions||[]).filter(function(s){ return (s.end ? day(s.end) : day(s.start)) >= TODAY; })
+    return (DATA.sessions||[]).filter(open)
       .sort(function(a,b){ return day(a.start) - day(b.start); });
   }
   function course(id){ return (DATA && DATA.courses || []).filter(function(c){ return c.id===id; })[0] || {name:id,colour:'#fff'}; }
@@ -1473,7 +1475,8 @@ h2{font-size:clamp(44px,7.4vw,108px)}
       var when = n<=0 ? '<b>'+T.today+'</b>' : n===1 ? '<b>'+T.tomorrow+'</b>' : T.inDays(n);
       $('#count').innerHTML = T.nextOne+when+' '+(n<=7 ? T.ticking : T.plenty);
     } else { $('#count').textContent = ''; }
-    var u = day(DATA.updated);
+    // the stamp moves on by itself when a session closes, so the list never looks stale
+    var u = (DATA.sessions||[]).reduce(function(m, s){ var d = day(s.start); return !open(s) && d <= TODAY && d > m ? d : m; }, day(DATA.updated));
     $('#upd').textContent = T.updated(u.getDate(), MON[u.getMonth()].toLowerCase());
 
     /* ticker */
