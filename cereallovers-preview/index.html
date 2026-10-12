@@ -79,9 +79,9 @@ h2{font-size:clamp(44px,7.4vw,108px)}
 .sc{position:absolute;pointer-events:none;overflow:visible}
 .sc path{fill:none;stroke:var(--s,var(--red));stroke-width:var(--w,3.2);stroke-linecap:round;stroke-linejoin:round;
   vector-effect:non-scaling-stroke}
-.dr path{stroke-dasharray:1 1.02;stroke-dashoffset:1;transition:stroke-dashoffset 1.15s cubic-bezier(.65,0,.25,1)}
+.dr path{stroke-dasharray:1 1.02;stroke-dashoffset:1;transition:stroke-dashoffset .7s cubic-bezier(.45,0,.25,1)}
 .dr.in path{stroke-dashoffset:0}
-.dr path:nth-child(2){transition-delay:.35s}
+.dr path:nth-child(2){transition-delay:.12s}
 .pop{opacity:0;scale:.3;rotate:-35deg;transition:opacity .35s, scale .55s cubic-bezier(.3,1.6,.5,1), rotate .55s cubic-bezier(.3,1.6,.5,1)}
 .pop.in{opacity:1;scale:1;rotate:0deg}
 .ring{position:relative;display:inline-block;z-index:0}
@@ -1247,7 +1247,7 @@ h2{font-size:clamp(44px,7.4vw,108px)}
   /* ---------- the scribbles: draw when they scroll in ---------- */
   var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
     es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  },{threshold:.25}) : null;
+  },{threshold:0, rootMargin:'0px 0px -6% 0px'}) : null;   // start drawing as soon as a doodle comes into view
   function watch(root){ $$('.dr,.pop',root).forEach(function(el){ if(rm||!io) el.classList.add('in'); else io.observe(el); }); }
   /* ---------- extra doodles in the margins of every section ---------- */
   var DOOD = [
@@ -1359,7 +1359,7 @@ h2{font-size:clamp(44px,7.4vw,108px)}
           el.style.strokeDashoffset = rm ? 0 : 'var(--o'+i+',1)';      // one shared value per pen
           bs.appendChild(el);
         };
-        if(p.g){ add(p.w*4.6*f, .045); add(p.w*2.2*f, .10); }   // a soft glow under the line
+        if(p.g && W >= 600){ add(p.w*4.6*f, .045); add(p.w*2.2*f, .10); }   // a soft glow under the line (not on phones: it triples the drawing work)
         add(p.w*f, p.o);
       });
       spineBox.appendChild(bs); bandEls.push({el:bs, y0:y0, y1:y0+bh, vals:[]});
@@ -1378,7 +1378,7 @@ h2{font-size:clamp(44px,7.4vw,108px)}
   // the tip glides toward the reader's position instead of jumping with each scroll step
   function glide(){
     var moving = false;
-    spine.forEach(function(p){ var diff = p.t - p.d; if(diff > .0004){ p.d += diff*.12; moving = true; } else p.d = p.t; });
+    spine.forEach(function(p){ var diff = p.t - p.d; if(diff > .0004){ p.d += diff*.22; moving = true; } else p.d = p.t; });
     paintBands();
     if(moving) requestAnimationFrame(glide); else animating = false;
   }
