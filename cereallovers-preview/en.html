@@ -568,8 +568,37 @@ h2{font-size:clamp(44px,7.4vw,108px)}
 .ex h3{font-size:clamp(30px,3vw,48px)}
 .nc:has(.ic){padding-bottom:78px}
 .nc .ic{right:10px;bottom:8px;width:74px;height:62px;z-index:-1}
-@media (max-width:960px){.nw{grid-template-columns:1fr 1fr}.nw .nc:first-child{grid-column:1 / -1}}
-@media (max-width:620px){#news{padding:84px 0 50px}.nw{grid-template-columns:1fr;gap:34px}.ex{grid-template-columns:1fr}.qr{width:150px;rotate:-3deg}
+/* hot chocolate, back for winter: the lead story, after the shop poster */
+.nw{grid-template-areas:"ex ex psl" "bag hc hc"}
+.nw .ex-c{grid-area:ex} .nw .bag-c{grid-area:bag} .nw .psl-c{grid-area:psl} .nw .hc{grid-area:hc}
+.nc.hc{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);padding:0;color:#fff;box-shadow:8px 8px 0 var(--coral)}
+.hc-ph{position:relative;margin:0;overflow:hidden;min-height:300px;border-right:2px solid var(--ink)}
+.hc-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:46% 50%}
+.hc-cream{position:absolute;right:5%;top:6%;margin:0;font-family:var(--hand);font-size:clamp(18px,1.6vw,24px);line-height:1.05;color:#fff;rotate:-4deg;text-align:right}
+.hc-ph .hc-arr{right:12%;top:25%;width:56px;height:56px}
+.hc-ph .hc-st{left:44%;top:22%;width:44px;height:44px;--s:var(--gold);--w:3}
+.hc-tx{padding:24px 22px 24px;container-type:inline-size}
+#news .hc .eye{color:var(--acid)}
+.hc-h{font-size:min(15cqi,64px)!important;color:#fff;margin:12px 0 12px!important;line-height:.86}
+.hc .mark > .sc path{stroke:var(--coral)}
+.hc .hand{color:#fff;font-size:clamp(19px,1.7vw,24px)}
+.hc-flav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 10px;list-style:none;margin:18px 0 0;padding:0}
+.hc-flav li{background:var(--c);color:var(--ink);border:2px solid var(--ink);padding:9px 10px 10px;rotate:var(--rot);box-shadow:4px 4px 0 rgba(255,255,255,.18);
+  transition:rotate .15s, translate .15s}
+.hc-flav li:hover{rotate:0deg;translate:0 -3px}
+.hc-flav span{display:block;font:700 8.5px/1 var(--sans);letter-spacing:.14em}
+.hc-flav b{display:block;font:700 min(7.4cqi,26px)/1 var(--sans);letter-spacing:-.03em;margin:6px 0 4px}
+.hc-flav em{display:block;font-family:var(--pen);font-style:normal;font-size:17px;line-height:1}
+.hc-back{position:absolute;right:-14px;top:-28px;z-index:4;width:100px;height:100px;border-radius:50%;background:var(--coral);color:var(--ink);
+  border:2px solid var(--ink);display:grid;place-content:center;text-align:center;font:700 13px/1 var(--sans);letter-spacing:.04em;rotate:12deg}
+.hc-back i{display:block;font-family:var(--pen);font-style:normal;font-size:19px;letter-spacing:0;margin-top:4px}
+@media (max-width:960px){.nw{grid-template-columns:1fr 1fr;grid-template-areas:"ex ex" "bag psl" "hc hc"}}
+@media (max-width:760px){.nc.hc{grid-template-columns:1fr}.hc-ph{min-height:0;aspect-ratio:1.3;border-right:0;border-bottom:2px solid var(--ink)}
+  .hc-tx{padding:24px 18px 24px}.hc-back{width:92px;height:92px;font-size:11px;right:-8px;top:-24px}.hc-back i{font-size:16px}
+  .nc.hc{box-shadow:6px 6px 0 var(--coral)}
+  .hc-cream{right:auto;top:auto;left:5%;bottom:7%;text-align:left;rotate:-3deg;font-size:21px}
+  .hc-ph .hc-arr{display:none}}
+@media (max-width:620px){#news{padding:84px 0 50px}.nw{grid-template-columns:1fr;grid-template-areas:"ex" "bag" "hc" "psl";gap:34px}.ex{grid-template-columns:1fr}.qr{width:150px;rotate:-3deg}
   .nc{box-shadow:5px 5px 0 var(--ink)}}
 
 /* ===== responsive ===== */
@@ -693,10 +722,10 @@ h2{font-size:clamp(44px,7.4vw,108px)}
     <div class="nw-head">
       <div><p class="eye">NEWS &#183; HOT OFF THE PRESS &#183; AUTUMN 2026</p>
         <h2>Hot<br><span class="mark">news.<svg class="sc dr" viewBox="0 0 500 110" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M 30 68 L 466 28 M 27 88 L 467 49" style="--s:var(--marker);--w:24"/></svg></span></h2></div>
-      <p class="hand">three things you need to know. right now.</p>
+      <p class="hand">four things you need to know. right now.</p>
     </div>
     <div class="nw">
-      <article class="nc" style="--c:var(--acid);--rot:-1.2deg">
+      <article class="nc ex-c" style="--c:var(--acid);--rot:-1.2deg">
         <span class="splat-host" data-seed="64" data-c="#ef4ea2" aria-hidden="true"></span>
         <span class="sticker">SAVE THE DATE</span>
         <div class="ex">
@@ -714,7 +743,7 @@ h2{font-size:clamp(44px,7.4vw,108px)}
         </div>
         <svg class="sc pop" viewBox="0 0 240 240" style="left:-26px;bottom:-30px;width:70px;height:70px;--s:var(--red);--w:3" aria-hidden="true"><path d="M 114 15 L 128 87 L 184 26 L 151 95 L 225 88 L 159 122 L 215 171 L 147 146 L 151 223 L 121 156 L 60 210 L 91 143 L 16 151 L 83 118 L 29 62 L 98 88 Z"/></svg>
       </article>
-      <article class="nc" style="--c:var(--marker);--rot:1.6deg">
+      <article class="nc bag-c" style="--c:var(--marker);--rot:1.6deg">
         <span class="splat-host" data-seed="73" data-c="#e8ff3a" aria-hidden="true"></span>
         <p class="eye">BAGEL OF THE MONTH</p>
         <h3>Tuna-<br>mayo.</h3>
@@ -722,7 +751,27 @@ h2{font-size:clamp(44px,7.4vw,108px)}
         <p class="pen">only this month. then it swims away.</p>
         <svg class="sc dr ic" viewBox="0 0 120 100" aria-hidden="true"><path pathLength="1" d="M 12 50 C 32 18 74 18 92 50 C 74 82 32 82 12 50 Z M 92 50 L 112 30 L 112 70 Z M 30 44 L 31 45" style="--s:var(--ink);--w:3"/></svg>
       </article>
-      <article class="nc" style="--c:var(--orange);--rot:-.8deg">
+      <article class="nc hc" style="--c:var(--ink);--rot:1deg">
+        <span class="hc-back" aria-hidden="true">BACK<br>FOR<br>WINTER<i>finally.</i></span>
+        <figure class="hc-ph">
+          <img src="img/b2/news/hot-chocolate.webp" alt="Hot chocolate poured over whipped cream in our mint cup" width="1400" height="1067" loading="lazy">
+          <p class="hc-cream">whipped cream?<br>obviously.</p>
+          <svg class="sc dr hc-arr" viewBox="0 0 120 120" aria-hidden="true"><path pathLength="1" d="M 104 8 C 70 20 46 50 40 98 M 22 76 L 40 100 L 60 80" style="--s:#fff;--w:3"/></svg>
+          <svg class="sc pop hc-st" viewBox="0 0 240 240" aria-hidden="true"><path d="M 114 15 L 128 87 L 184 26 L 151 95 L 225 88 L 159 122 L 215 171 L 147 146 L 151 223 L 121 156 L 60 210 L 91 143 L 16 151 L 83 118 L 29 62 L 98 88 Z"/></svg>
+        </figure>
+        <div class="hc-tx">
+          <p class="eye">THE WINTER MENU</p>
+          <h3 class="hc-h">Hot<br><span class="mark">chocolate.<svg class="sc dr" viewBox="0 0 500 110" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M 30 68 L 466 28 M 27 88 L 467 49" style="--w:24"/></svg></span></h3>
+          <p class="hand">four ways. pick one. or come back four times.</p>
+          <ul class="hc-flav" aria-label="Four hot chocolates">
+            <li style="--c:var(--ochre);--rot:-2deg"><span>HOT CHOCOLATE</span><b>Hazelnut</b><em>toasty. nutty. cosy.</em></li>
+            <li style="--c:var(--ember);--rot:1.4deg"><span>HOT CHOCOLATE</span><b>Cinnamon</b><em>warm spice, all the way.</em></li>
+            <li style="--c:var(--jade);--rot:-1deg"><span>HOT CHOCOLATE</span><b>Coconut</b><em>a little holiday.</em></li>
+            <li style="--c:var(--leaf);--rot:1.8deg"><span>HOT CHOCOLATE</span><b>Pistachio</b><em>the green one. you know.</em></li>
+          </ul>
+        </div>
+      </article>
+      <article class="nc psl-c" style="--c:var(--orange);--rot:-.8deg">
         <span class="splat-host" data-seed="88" data-c="#e8ff3a" aria-hidden="true"></span>
         <span class="sticker" style="background:var(--acid);color:var(--ink);rotate:-5deg">FAVE DRINK</span>
         <p class="eye">THE FAVE DRINK IS</p>
