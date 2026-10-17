@@ -1,6 +1,6 @@
 {
   "_read_me": "This one file feeds the courses and the city dates on the site. A text can be one line for both languages, or {\"en\": \"...\", \"fr\": \"...\"}. Dates in YYYY-MM-DD. A session closes by itself on the day it starts (it leaves the list, and the 'updated' stamp moves to that day); add \"closed\": true to close one earlier, for example when it is full. A city event disappears the day after its last date. Change 'updated' whenever you edit. Prices only show when show_prices is true. A course with \"direct\": true is booked on its own site (book.url), so it gets no 'send me info' button.",
-  "updated": "2026-10-12",
+  "updated": "2026-10-17",
   "show_prices": false,
   "signup": {
     "endpoint": "",
@@ -272,7 +272,7 @@
     },
     {
       "course": "hobby",
-      "start": "2026-11-21",
+      "start": "2026-11-14",
       "end": "",
       "time": "09:30–12:30",
       "where": {
