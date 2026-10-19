@@ -490,6 +490,7 @@ h2{font-size:clamp(44px,7.4vw,108px)}
 .pin.snap{color:var(--ink)}
 .pin.wide img{aspect-ratio:2.2/1}
 .pin.sq img{aspect-ratio:1}
+.pin.land img{aspect-ratio:4/3}
 .tack{position:absolute;z-index:4;left:50%;top:-10px;width:19px;height:19px;margin-left:-9px;border-radius:50%;
   background:radial-gradient(circle at 34% 30%,rgba(255,255,255,.75) 0 2px,transparent 3px),var(--pc,var(--red));
   box-shadow:0 0 0 1.5px var(--ink),0 4px 0 rgba(0,0,0,.35)}
@@ -569,8 +570,8 @@ h2{font-size:clamp(44px,7.4vw,108px)}
 .nc:has(.ic){padding-bottom:78px}
 .nc .ic{right:10px;bottom:8px;width:74px;height:62px;z-index:-1}
 /* hot chocolate, back for winter: the lead story, after the shop poster */
-.nw{grid-template-areas:"ex ex psl" "bag hc hc"}
-.nw .ex-c{grid-area:ex} .nw .bag-c{grid-area:bag} .nw .psl-c{grid-area:psl} .nw .hc{grid-area:hc}
+.nw{grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));grid-template-areas:"ex ex bag psl" "hc hc hc wal";gap:30px 22px}
+.nw .ex-c{grid-area:ex} .nw .bag-c{grid-area:bag} .nw .psl-c{grid-area:psl} .nw .hc{grid-area:hc} .nw .wal-c{grid-area:wal}
 .nc.hc{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);padding:0;color:#fff;box-shadow:8px 8px 0 var(--coral)}
 .hc-ph{position:relative;margin:0;overflow:hidden;min-height:300px;border-right:2px solid var(--ink)}
 .hc-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:46% 50%}
@@ -592,13 +593,21 @@ h2{font-size:clamp(44px,7.4vw,108px)}
 .hc-back{position:absolute;right:-14px;top:-28px;z-index:4;width:100px;height:100px;border-radius:50%;background:var(--coral);color:var(--ink);
   border:2px solid var(--ink);display:grid;place-content:center;text-align:center;font:700 13px/1 var(--sans);letter-spacing:.04em;rotate:12deg}
 .hc-back i{display:block;font-family:var(--pen);font-style:normal;font-size:19px;letter-spacing:0;margin-top:4px}
-@media (max-width:960px){.nw{grid-template-columns:1fr 1fr;grid-template-areas:"ex ex" "bag psl" "hc hc"}}
-@media (max-width:760px){.nc.hc{grid-template-columns:1fr}.hc-ph{min-height:0;aspect-ratio:1.3;border-right:0;border-bottom:2px solid var(--ink)}
+/* the walnut caramel autumn bar, new for autumn 2026: sits under the pumpkin spice latte, its best friend */
+.wal-c h3{font-size:clamp(30px,3vw,46px)}
+.psl-c{container-type:inline-size}
+.psl-c .back{font-size:min(50px,15cqi)}   /* BAAACKKKK stays on one line in the narrow column */
+.wal-ph{position:relative;margin:2px -14% 4px -6%;max-width:340px;z-index:2}
+.wal-ph img{width:100%;height:auto;rotate:-3deg;filter:drop-shadow(0 16px 14px rgba(0,0,0,.32));transition:rotate .3s, translate .3s}
+.wal-c:hover .wal-ph img{rotate:-1deg;translate:0 -6px}
+.wal-c .pen{margin-top:10px}
+@media (max-width:1100px){.nw{grid-template-columns:1fr 1fr;grid-template-areas:"ex ex" "bag psl" "hc wal"}}
+@media (max-width:1100px){.nc.hc{grid-template-columns:1fr}.hc-ph{min-height:0;aspect-ratio:1.3;border-right:0;border-bottom:2px solid var(--ink)}
   .hc-tx{padding:24px 18px 24px}.hc-back{width:92px;height:92px;font-size:11px;right:-8px;top:-24px}.hc-back i{font-size:16px}
   .nc.hc{box-shadow:6px 6px 0 var(--coral)}
   .hc-cream{right:auto;top:auto;left:5%;bottom:7%;text-align:left;rotate:-3deg;font-size:21px}
   .hc-ph .hc-arr{display:none}}
-@media (max-width:620px){#news{padding:84px 0 50px}.nw{grid-template-columns:1fr;grid-template-areas:"ex" "bag" "hc" "psl";gap:34px}.ex{grid-template-columns:1fr}.qr{width:150px;rotate:-3deg}
+@media (max-width:620px){#news{padding:84px 0 50px}.nw{grid-template-columns:1fr;grid-template-areas:"ex" "bag" "hc" "psl" "wal";gap:34px}.wal-ph{margin:2px -4% 4px}.ex{grid-template-columns:1fr}.qr{width:150px;rotate:-3deg}
   .nc{box-shadow:5px 5px 0 var(--ink)}}
 
 /* ===== responsive ===== */
@@ -722,7 +731,7 @@ h2{font-size:clamp(44px,7.4vw,108px)}
     <div class="nw-head">
       <div><p class="eye">ACTUS &#183; TOUT CHAUD &#183; AUTOMNE 2026</p>
         <h2>Tout<br><span class="mark">chaud.<svg class="sc dr" viewBox="0 0 500 110" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M 30 68 L 466 28 M 27 88 L 467 49" style="--s:var(--marker);--w:24"/></svg></span></h2></div>
-      <p class="hand">quatre choses à savoir. tout de suite.</p>
+      <p class="hand">cinq choses à savoir. tout de suite.</p>
     </div>
     <div class="nw">
       <article class="nc ex-c" style="--c:var(--acid);--rot:-1.2deg">
@@ -779,6 +788,15 @@ h2{font-size:clamp(44px,7.4vw,108px)}
         <p class="psl">Pumpkin spice latte</p>
         <p class="hand">préparé minute avec de vraies citrouilles !!! la saison des gros pulls, dans une tasse.</p>
         <svg class="sc dr ic" viewBox="0 0 120 110" aria-hidden="true"><path pathLength="1" d="M 60 30 C 20 30 8 62 20 82 C 32 102 88 102 100 82 C 112 62 100 30 60 30 M 60 30 C 46 50 46 82 60 100 M 60 30 C 74 50 74 82 60 100 M 60 30 L 62 14 C 66 9 73 11 76 16" style="--s:var(--ink);--w:3"/></svg>
+      </article>
+      <article class="nc wal-c" style="--c:var(--jade);--rot:1.4deg">
+        <span class="splat-host" data-seed="91" data-c="#ef4ea2" aria-hidden="true"></span>
+        <span class="sticker" style="background:var(--marker);rotate:5deg">NOUVEAU</span>
+        <p class="eye">LA SUPER BARRE D’AUTOMNE</p>
+        <h3>Noix<br><span class="mark">caramel.<svg class="sc dr" viewBox="0 0 500 110" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M 30 68 L 466 28 M 27 88 L 467 49" style="--w:22"/></svg></span></h3>
+        <figure class="wal-ph"><img src="img/b2/news/walnut-caramel-psl.webp" alt="Une barre noix caramel, avec un pumpkin spice latte derrière" width="1100" height="945" loading="lazy"></figure>
+        <p class="hand">des noix à gogo. du caramel dessus. du croquant dessous.</p>
+        <p class="pen">la meilleure amie du pumpkin spice latte &#8593;</p>
       </article>
     </div>
   </div>
@@ -927,27 +945,47 @@ h2{font-size:clamp(44px,7.4vw,108px)}
         <figcaption>derrière le bar. en direct.</figcaption></figure>
       <figure class="pin snap" style="--rot:2deg;--pc:var(--acid)"><span class="tack" aria-hidden="true"></span>
         <img src="img/b2/wall/crew.webp" alt="Une barista avec une tasse sous le logo Cereal Lovers, qui fait le signe de la paix" loading="lazy"><figcaption>l’équipe du matin</figcaption></figure>
+      <figure class="pin snap" style="--rot:-1.5deg;--pc:var(--marker)"><span class="tack" aria-hidden="true"></span>
+        <div class="phone"><span class="live">en direct</span>
+          <video src="img/b2/live/walnut.mp4" poster="img/b2/live/walnut.webp" muted loop playsinline preload="none" aria-label="Vidéo : la barre noix caramel sur le comptoir"></video>
+          <button class="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9 H8 L13 5 V19 L8 15 H4 Z"/><path class="w1" d="M17 9.5 L21.5 14 M21.5 9.5 L17 14"/><path class="w2" d="M16.5 9 C18 10.5 18 13.5 16.5 15 M19 6.5 C22 9.5 22 14.5 19 17.5"/></svg><span class="w1">activer le son</span><span class="w2">couper le son</span></button></div>
+        <figcaption>noix caramel. l’automne est là.</figcaption></figure>
       <a class="pin slot" href="https://www.instagram.com/cerealloves/" target="_blank" rel="noopener" style="--rot:-1.5deg;--pc:var(--marker)"><span class="tack" aria-hidden="true"></span>
         cette place est pour vous.<small>postez, taguez @cerealloves</small></a>
       <figure class="pin snap" style="--rot:2.5deg;--pc:var(--cobalt)"><span class="tack" aria-hidden="true"></span>
         <img src="img/b2/wall/flatwhite.webp" alt="Un barista souriant tend un flat white" loading="lazy"><figcaption>flat white, servi avec le sourire</figcaption></figure>
+      <figure class="pin snap" style="--rot:2deg;--pc:var(--cobalt)"><span class="tack" aria-hidden="true"></span>
+        <img src="img/b2/wall/coffees.webp" alt="Les cafés N°16, N°17 et N°18 sur le comptoir" loading="lazy"><figcaption>N°16, 17, 18. choisissez.</figcaption></figure>
       <a class="pin soc" href="https://www.instagram.com/cerealloves/" target="_blank" rel="noopener" style="--rot:-2deg;--c:var(--acid);--pc:var(--red)"><span class="tack" aria-hidden="true"></span>
         <svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="5" width="30" height="30" rx="9"/><circle cx="20" cy="20" r="7"/><circle cx="28.6" cy="11.4" r="1.3" fill="currentColor" stroke="none"/></svg><span><b>Instagram</b><span>@cerealloves &#8599;</span></span></a>
       <figure class="pin snap wide" style="--rot:1.5deg;--pc:var(--orange)"><span class="tack" aria-hidden="true"></span>
         <img src="img/b2/wall/jars-counter.webp" alt="Les quatre bocaux de granola sur le comptoir" loading="lazy"><figcaption>les quatre, sur le comptoir</figcaption></figure>
+      <figure class="pin snap land" style="--rot:-1deg;--pc:var(--jade)"><span class="tack" aria-hidden="true"></span>
+        <img src="img/b2/wall/counter-long.webp" alt="Le long comptoir, les étagères et les lampes" loading="lazy"><figcaption>tout le comptoir, d’un bout à l’autre.</figcaption></figure>
       <figure class="pin snap" style="--rot:2deg;--pc:var(--acid)"><span class="tack" aria-hidden="true"></span>
         <div class="phone"><span class="live">en direct</span>
           <video src="img/b2/live/jars.mp4" poster="img/b2/live/jars.webp" muted loop playsinline preload="none" aria-label="Vidéo : les bocaux de granola sur l’étagère"></video>
           <button class="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9 H8 L13 5 V19 L8 15 H4 Z"/><path class="w1" d="M17 9.5 L21.5 14 M21.5 9.5 L17 14"/><path class="w2" d="M16.5 9 C18 10.5 18 13.5 16.5 15 M19 6.5 C22 9.5 22 14.5 19 17.5"/></svg><span class="w1">activer le son</span><span class="w2">couper le son</span></button></div>
         <figcaption>quatre bocaux. une étagère. avec le son.</figcaption></figure>
+      <figure class="pin snap sq" style="--rot:-2.5deg;--pc:var(--acid)"><span class="tack" aria-hidden="true"></span>
+        <img src="img/b2/wall/cookies.webp" alt="La boîte à cookies sur le comptoir, pleine" loading="lazy"><figcaption>la boîte à cookies. pleine. pour l’instant.</figcaption></figure>
       <figure class="pin snap" style="--rot:-3deg;--pc:var(--marker)"><span class="tack" aria-hidden="true"></span>
         <img src="img/b2/wall/granola-close.webp" alt="Un bol de granola tendu à mains gantées" loading="lazy"><figcaption>le granola, taille réelle</figcaption></figure>
+      <figure class="pin snap" style="--rot:2.5deg;--pc:var(--orange)"><span class="tack" aria-hidden="true"></span>
+        <div class="phone"><span class="live">en direct</span>
+          <video src="img/b2/live/trays.mp4" poster="img/b2/live/trays.webp" muted loop playsinline preload="none" aria-label="Vidéo : quatre plaques de barres, avant la découpe"></video>
+          <button class="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9 H8 L13 5 V19 L8 15 H4 Z"/><path class="w1" d="M17 9.5 L21.5 14 M21.5 9.5 L17 14"/><path class="w2" d="M16.5 9 C18 10.5 18 13.5 16.5 15 M19 6.5 C22 9.5 22 14.5 19 17.5"/></svg><span class="w1">activer le son</span><span class="w2">couper le son</span></button></div>
+        <figcaption>quatre plaques, avant le couteau.</figcaption></figure>
       <figure class="pin snap" style="--rot:1deg;--pc:var(--red)"><span class="tack" aria-hidden="true"></span>
         <img src="img/b2/wall/pour.webp" alt="Une barista tasse un espresso au bar, en souriant" loading="lazy"><figcaption>on règle le moulin. chaque matin.</figcaption></figure>
+      <figure class="pin snap" style="--rot:1.5deg;--pc:var(--red)"><span class="tack" aria-hidden="true"></span>
+        <img src="img/b2/wall/ceiling.webp" alt="Le logo cœur au mur, sous le plafond en zigzag rouge et blanc" loading="lazy"><figcaption>le plafond zigzag. vous le connaissez.</figcaption></figure>
       <a class="pin slot" href="https://www.instagram.com/cerealloves/" target="_blank" rel="noopener" style="--rot:2.5deg;--pc:var(--acid)"><span class="tack" aria-hidden="true"></span>
         votre bagel ici.<small>postez, taguez @cerealloves</small></a>
       <figure class="pin snap sq" style="--rot:-2deg;--pc:var(--jade)"><span class="tack" aria-hidden="true"></span>
         <img src="img/b2/wall/breakfast-plate.webp" alt="Une coupe du petit-déj sur une assiette, avec sa cuillère, en route vers une table" loading="lazy"><figcaption>le petit-déj, servi comme il faut</figcaption></figure>
+      <figure class="pin snap" style="--rot:-2deg;--pc:var(--marker)"><span class="tack" aria-hidden="true"></span>
+        <img src="img/b2/wall/marble-cake.webp" alt="Des tranches de cake marbré dans la vitrine" loading="lazy"><figcaption>cake marbré. en tranches épaisses.</figcaption></figure>
       <a class="pin soc" href="https://www.facebook.com/cereallovers/" target="_blank" rel="noopener" style="--rot:1.5deg;--c:var(--beet);--pc:var(--cobalt)"><span class="tack" aria-hidden="true"></span>
         <svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="5" width="30" height="30" rx="9"/><path d="M23 35 V17 C23 13.4 25 11.6 28.6 11.6 M18 21.5 H28"/></svg><span><b>Facebook</b><span>Cereal Lovers &#8599;</span></span></a>
     </div>
@@ -1277,7 +1315,7 @@ h2{font-size:clamp(44px,7.4vw,108px)}
       WDF:['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY'],
       bars:['Brahoni tiramisu','Salted caramel','Coconut chocolate','Banana peanut','AC/DC','Pink velvet','Power peanut',
         'Matcha pink','Carrot cake','Lemon cheesecake','Raspberry','Cookies ’n’ cream','Maple walnut tahini','Strawberry white choc',
-        'Thai me up','Espresso balls','Hazelnut balls'] },
+        'Thai me up','Espresso balls','Hazelnut balls','Walnut caramel'] },
     fr:{ here:'vous êtes ici : ', info:'envoyez-moi des infos', next:'prochain groupe ouvert : ', any:'la date de votre choix', want:'je veux celle-ci',
       register:'s’inscrire', nextOne:'la prochaine ', today:'aujourd’hui.', tomorrow:'demain.', inDays:function(n){ return 'dans <b>'+n+' jours.</b>'; },
       ticking:'le compte à rebours est lancé.', plenty:'on a le temps. enfin, pas tant que ça.', updated:function(d,m){ return 'mis à jour le '+d+' '+m; },
@@ -1291,7 +1329,7 @@ h2{font-size:clamp(44px,7.4vw,108px)}
       WDF:['DIMANCHE','LUNDI','MARDI','MERCREDI','JEUDI','VENDREDI','SAMEDI'],
       bars:['Brahoni tiramisu','Caramel salé','Coco chocolat','Banane cacahuète','AC/DC','Pink velvet','Power peanut',
         'Matcha pink','Carrot cake','Cheesecake citron','Framboise','Cookies ’n’ cream','Érable, noix, tahini','Fraise chocolat blanc',
-        'Thai me up','Boules espresso','Boules noisette'] }
+        'Thai me up','Boules espresso','Boules noisette','Noix caramel'] }
   }[LANG];
 
   /* ---------- the scribbles: draw when they scroll in ---------- */
