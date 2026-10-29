@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Cereal Lovers</title>
 <meta name="description" content="Cereal Lovers, Place du Théâtre, Luxembourg : petit-déjeuner toute la journée, café de spécialité, notre granola et la Coffee Lovers Barista Academy.">
-<link rel="icon" href="data:,">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="fonts.css">
 <style>
 :root{
@@ -299,6 +299,8 @@ h2{font-size:clamp(44px,7.4vw,108px)}
 .gr-in .hand{margin-top:20px}
 .gr-four{position:relative;rotate:2deg}
 .gr-four img{aspect-ratio:4/3;object-fit:cover}
+.gift{position:relative;z-index:2;margin:22px 0 0 8%;max-width:340px;font-family:var(--hand);font-size:clamp(20px,1.8vw,26px);line-height:1.05;rotate:-2.5deg;background:var(--acid);color:var(--ink);border:2px solid var(--ink);padding:12px 16px;box-shadow:5px 5px 0 var(--ink)}
+.gift small{display:block;font:700 11px/1.25 var(--sans);text-transform:uppercase;letter-spacing:.06em;margin-top:8px}
 .gr-four .sp2{left:-48px;bottom:-34px;width:100px;height:100px;--s:var(--red)}
 .jars{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink)}
 .jar{position:relative;background:var(--c);padding:56px 40px 60px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);gap:8px 26px;
@@ -571,7 +573,8 @@ h2{font-size:clamp(44px,7.4vw,108px)}
 .nc .ic{right:10px;bottom:8px;width:74px;height:62px;z-index:-1}
 /* hot chocolate, back for winter: the lead story, after the shop poster */
 .nw{grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));grid-template-areas:"ex ex bag psl" "hc hc hc wal";gap:30px 22px}
-.nw .ex-c{grid-area:ex} .nw .bag-c{grid-area:bag} .nw .psl-c{grid-area:psl} .nw .hc{grid-area:hc} .nw .wal-c{grid-area:wal}
+.nw .ex-c{grid-area:ex} .nw .bag-c{grid-area:bag}
+.nw.no-ex{grid-template-areas:"bag bag psl psl" "hc hc hc wal"} .nw .psl-c{grid-area:psl} .nw .hc{grid-area:hc} .nw .wal-c{grid-area:wal}
 .nc.hc{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);padding:0;color:#fff;box-shadow:8px 8px 0 var(--coral)}
 .hc-ph{position:relative;margin:0;overflow:hidden;min-height:300px;border-right:2px solid var(--ink)}
 .hc-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:46% 50%}
@@ -601,13 +604,13 @@ h2{font-size:clamp(44px,7.4vw,108px)}
 .wal-ph img{width:100%;height:auto;rotate:-3deg;filter:drop-shadow(0 16px 14px rgba(0,0,0,.32));transition:rotate .3s, translate .3s}
 .wal-c:hover .wal-ph img{rotate:-1deg;translate:0 -6px}
 .wal-c .pen{margin-top:10px}
-@media (max-width:1100px){.nw{grid-template-columns:1fr 1fr;grid-template-areas:"ex ex" "bag psl" "hc wal"}}
+@media (max-width:1100px){.nw{grid-template-columns:1fr 1fr;grid-template-areas:"ex ex" "bag psl" "hc wal"}.nw.no-ex{grid-template-areas:"bag psl" "hc wal"}}
 @media (max-width:1100px){.nc.hc{grid-template-columns:1fr}.hc-ph{min-height:0;aspect-ratio:1.3;border-right:0;border-bottom:2px solid var(--ink)}
   .hc-tx{padding:24px 18px 24px}.hc-back{width:92px;height:92px;font-size:11px;right:-8px;top:-24px}.hc-back i{font-size:16px}
   .nc.hc{box-shadow:6px 6px 0 var(--coral)}
   .hc-cream{right:auto;top:auto;left:5%;bottom:7%;text-align:left;rotate:-3deg;font-size:21px}
   .hc-ph .hc-arr{display:none}}
-@media (max-width:620px){#news{padding:84px 0 50px}.nw{grid-template-columns:1fr;grid-template-areas:"ex" "bag" "hc" "psl" "wal";gap:34px}.wal-ph{margin:2px -4% 4px}.ex{grid-template-columns:1fr}.qr{width:150px;rotate:-3deg}
+@media (max-width:620px){#news{padding:84px 0 50px}.nw{grid-template-columns:1fr;grid-template-areas:"ex" "bag" "hc" "psl" "wal";gap:34px}.nw.no-ex{grid-template-areas:"bag" "hc" "psl" "wal"}.wal-ph{margin:2px -4% 4px}.ex{grid-template-columns:1fr}.qr{width:150px;rotate:-3deg}
   .nc{box-shadow:5px 5px 0 var(--ink)}}
 
 /* ===== responsive ===== */
@@ -731,10 +734,10 @@ h2{font-size:clamp(44px,7.4vw,108px)}
     <div class="nw-head">
       <div><p class="eye">ACTUS &#183; TOUT CHAUD &#183; AUTOMNE 2026</p>
         <h2>Tout<br><span class="mark">chaud.<svg class="sc dr" viewBox="0 0 500 110" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M 30 68 L 466 28 M 27 88 L 467 49" style="--s:var(--marker);--w:24"/></svg></span></h2></div>
-      <p class="hand">cinq choses à savoir. tout de suite.</p>
+      <p class="hand">ce qu’il faut savoir. tout de suite.</p>
     </div>
     <div class="nw">
-      <article class="nc ex-c" style="--c:var(--acid);--rot:-1.2deg">
+      <article class="nc ex-c" data-until="2026-11-21" style="--c:var(--acid);--rot:-1.2deg">
         <span class="splat-host" data-seed="64" data-c="#ef4ea2" aria-hidden="true"></span>
         <span class="sticker">À VOS AGENDAS</span>
         <div class="ex">
@@ -744,10 +747,10 @@ h2{font-size:clamp(44px,7.4vw,108px)}
             <p class="d">Sam. 21 nov. &#183; 11 h&#8211;18 h</p>
             <p class="n">Luxexpo The Box &#183; hall principal &#183; espace Horesca</p>
             <p class="hand">la Barista Academy part en tournée. venez verser avec nous. ça va être TROP bien.</p>
-            <a class="nbtn" href="https://cl-barista-academy.vercel.app/qr" target="_blank" rel="noopener">La Barista Academy &#8594;</a>
+            <a class="nbtn" href="https://go.cereallovers.lu/q/academy" target="_blank" rel="noopener">La Barista Academy &#8594;</a>
           </div>
           <figure class="snap qr"><span class="tape" aria-hidden="true"></span>
-            <img src="img/b2/news/qr-academy.svg" alt="QR code vers la page de la Barista Academy" width="296" height="296">
+            <img src="img/b2/news/qr-go-academy.svg" alt="QR code vers la page de la Barista Academy" width="296" height="296">
             <figcaption>scannez-moi</figcaption></figure>
         </div>
         <svg class="sc pop" viewBox="0 0 240 240" style="left:-26px;bottom:-30px;width:70px;height:70px;--s:var(--red);--w:3" aria-hidden="true"><path d="M 114 15 L 128 87 L 184 26 L 151 95 L 225 88 L 159 122 L 215 171 L 147 146 L 151 223 L 121 156 L 60 210 L 91 143 L 16 151 L 83 118 L 29 62 L 98 88 Z"/></svg>
@@ -943,8 +946,15 @@ h2{font-size:clamp(44px,7.4vw,108px)}
           <video src="img/b2/live/team.mp4" poster="img/b2/live/team.webp" muted loop playsinline preload="none" aria-label="Vidéo : notre équipe derrière le bar"></video>
           <button class="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9 H8 L13 5 V19 L8 15 H4 Z"/><path class="w1" d="M17 9.5 L21.5 14 M21.5 9.5 L17 14"/><path class="w2" d="M16.5 9 C18 10.5 18 13.5 16.5 15 M19 6.5 C22 9.5 22 14.5 19 17.5"/></svg><span class="w1">activer le son</span><span class="w2">couper le son</span></button></div>
         <figcaption>derrière le bar. en direct.</figcaption></figure>
+      <figure class="pin snap" style="--rot:1.8deg;--pc:var(--acid)"><span class="tack" aria-hidden="true"></span>
+        <div class="phone"><span class="live">en direct</span>
+          <video src="img/b2/live/latte-green.mp4" poster="img/b2/live/latte-green.webp" muted loop playsinline preload="none" aria-label="Vidéo : Laura dessine un latte art vert sur un latte rose"></video>
+          <button class="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9 H8 L13 5 V19 L8 15 H4 Z"/><path class="w1" d="M17 9.5 L21.5 14 M21.5 9.5 L17 14"/><path class="w2" d="M16.5 9 C18 10.5 18 13.5 16.5 15 M19 6.5 C22 9.5 22 14.5 19 17.5"/></svg><span class="w1">activer le son</span><span class="w2">couper le son</span></button></div>
+        <figcaption>rose, puis vert. Laura verse.</figcaption></figure>
       <figure class="pin snap" style="--rot:2deg;--pc:var(--acid)"><span class="tack" aria-hidden="true"></span>
         <img src="img/b2/wall/crew.webp" alt="Une barista avec une tasse sous le logo Cereal Lovers, qui fait le signe de la paix" loading="lazy"><figcaption>l’équipe du matin</figcaption></figure>
+      <figure class="pin snap" style="--rot:-2deg;--pc:var(--orange)"><span class="tack" aria-hidden="true"></span>
+        <img src="img/b2/wall/cucumber.webp" alt="Un membre de l’équipe coupe du concombre, gants bleus, derrière le bar" loading="lazy"><figcaption>l’heure du concombre. gants enfilés.</figcaption></figure>
       <figure class="pin snap" style="--rot:-1.5deg;--pc:var(--marker)"><span class="tack" aria-hidden="true"></span>
         <div class="phone"><span class="live">en direct</span>
           <video src="img/b2/live/walnut.mp4" poster="img/b2/live/walnut.webp" muted loop playsinline preload="none" aria-label="Vidéo : la barre noix caramel sur le comptoir"></video>
@@ -956,10 +966,14 @@ h2{font-size:clamp(44px,7.4vw,108px)}
         <img src="img/b2/wall/flatwhite.webp" alt="Un barista souriant tend un flat white" loading="lazy"><figcaption>flat white, servi avec le sourire</figcaption></figure>
       <figure class="pin snap" style="--rot:2deg;--pc:var(--cobalt)"><span class="tack" aria-hidden="true"></span>
         <img src="img/b2/wall/coffees.webp" alt="Les cafés N°16, N°17 et N°18 sur le comptoir" loading="lazy"><figcaption>N°16, 17, 18. choisissez.</figcaption></figure>
+      <figure class="pin snap land" style="--rot:-1.5deg;--pc:var(--marker)"><span class="tack" aria-hidden="true"></span>
+        <img src="img/b2/wall/bags-lamp.webp" alt="Les sachets de café N°17, N°18 et N°16 sur le comptoir en verre, sous la lampe en osier" loading="lazy"><figcaption>trois cafés et une lampe.</figcaption></figure>
       <a class="pin soc" href="https://www.instagram.com/cerealloves/" target="_blank" rel="noopener" style="--rot:-2deg;--c:var(--acid);--pc:var(--red)"><span class="tack" aria-hidden="true"></span>
         <svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="5" width="30" height="30" rx="9"/><circle cx="20" cy="20" r="7"/><circle cx="28.6" cy="11.4" r="1.3" fill="currentColor" stroke="none"/></svg><span><b>Instagram</b><span>@cerealloves &#8599;</span></span></a>
       <figure class="pin snap wide" style="--rot:1.5deg;--pc:var(--orange)"><span class="tack" aria-hidden="true"></span>
         <img src="img/b2/wall/jars-counter.webp" alt="Les quatre bocaux de granola sur le comptoir" loading="lazy"><figcaption>les quatre, sur le comptoir</figcaption></figure>
+      <figure class="pin snap land" style="--rot:2deg;--pc:var(--cobalt)"><span class="tack" aria-hidden="true"></span>
+        <img src="img/b2/wall/shelf-wall.webp" alt="Le mur d’étagères : les sachets de café au-dessus des bocaux de granola or, turquoise, rose et vert" loading="lazy"><figcaption>or, turquoise, rose, vert. on recommence.</figcaption></figure>
       <figure class="pin snap land" style="--rot:-1deg;--pc:var(--jade)"><span class="tack" aria-hidden="true"></span>
         <img src="img/b2/wall/counter-long.webp" alt="Le long comptoir, les étagères et les lampes" loading="lazy"><figcaption>tout le comptoir, d’un bout à l’autre.</figcaption></figure>
       <figure class="pin snap" style="--rot:2deg;--pc:var(--acid)"><span class="tack" aria-hidden="true"></span>
@@ -969,6 +983,11 @@ h2{font-size:clamp(44px,7.4vw,108px)}
         <figcaption>quatre bocaux. une étagère. avec le son.</figcaption></figure>
       <figure class="pin snap sq" style="--rot:-2.5deg;--pc:var(--acid)"><span class="tack" aria-hidden="true"></span>
         <img src="img/b2/wall/cookies.webp" alt="La boîte à cookies sur le comptoir, pleine" loading="lazy"><figcaption>la boîte à cookies. pleine. pour l’instant.</figcaption></figure>
+      <figure class="pin snap" style="--rot:-1.8deg;--pc:var(--marker)"><span class="tack" aria-hidden="true"></span>
+        <div class="phone"><span class="live">en direct</span>
+          <video src="img/b2/live/latte-pink.mp4" poster="img/b2/live/latte-pink.webp" muted loop playsinline preload="none" aria-label="Vidéo : Laura dessine un latte art rose sur un latte doré"></video>
+          <button class="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9 H8 L13 5 V19 L8 15 H4 Z"/><path class="w1" d="M17 9.5 L21.5 14 M21.5 9.5 L17 14"/><path class="w2" d="M16.5 9 C18 10.5 18 13.5 16.5 15 M19 6.5 C22 9.5 22 14.5 19 17.5"/></svg><span class="w1">activer le son</span><span class="w2">couper le son</span></button></div>
+        <figcaption>or, puis rose. le son, svp.</figcaption></figure>
       <figure class="pin snap" style="--rot:-3deg;--pc:var(--marker)"><span class="tack" aria-hidden="true"></span>
         <img src="img/b2/wall/granola-close.webp" alt="Un bol de granola tendu à mains gantées" loading="lazy"><figcaption>le granola, taille réelle</figcaption></figure>
       <figure class="pin snap" style="--rot:2.5deg;--pc:var(--orange)"><span class="tack" aria-hidden="true"></span>
@@ -978,14 +997,25 @@ h2{font-size:clamp(44px,7.4vw,108px)}
         <figcaption>quatre plaques, avant le couteau.</figcaption></figure>
       <figure class="pin snap" style="--rot:1deg;--pc:var(--red)"><span class="tack" aria-hidden="true"></span>
         <img src="img/b2/wall/pour.webp" alt="Une barista tasse un espresso au bar, en souriant" loading="lazy"><figcaption>on règle le moulin. chaque matin.</figcaption></figure>
+      <figure class="pin snap" style="--rot:-2.5deg;--pc:var(--jade)"><span class="tack" aria-hidden="true"></span>
+        <img src="img/b2/wall/milk.webp" alt="Laura fait mousser le lait au bar, en riant" loading="lazy"><figcaption>le lait chante.</figcaption></figure>
       <figure class="pin snap" style="--rot:1.5deg;--pc:var(--red)"><span class="tack" aria-hidden="true"></span>
         <img src="img/b2/wall/ceiling.webp" alt="Le logo cœur au mur, sous le plafond en zigzag rouge et blanc" loading="lazy"><figcaption>le plafond zigzag. vous le connaissez.</figcaption></figure>
+      <figure class="pin snap sq" style="--rot:2deg;--pc:var(--orange)"><span class="tack" aria-hidden="true"></span>
+        <img src="img/b2/wall/bags-line.webp" alt="Des rangées de sachets de café N°16, N°17 et N°18 alignés sur le comptoir" loading="lazy"><figcaption>tout le monde en rang, gentiment.</figcaption></figure>
       <a class="pin slot" href="https://www.instagram.com/cerealloves/" target="_blank" rel="noopener" style="--rot:2.5deg;--pc:var(--acid)"><span class="tack" aria-hidden="true"></span>
         votre bagel ici.<small>postez, taguez @cerealloves</small></a>
       <figure class="pin snap sq" style="--rot:-2deg;--pc:var(--jade)"><span class="tack" aria-hidden="true"></span>
         <img src="img/b2/wall/breakfast-plate.webp" alt="Une coupe du petit-déj sur une assiette, avec sa cuillère, en route vers une table" loading="lazy"><figcaption>le petit-déj, servi comme il faut</figcaption></figure>
+      <figure class="pin snap" style="--rot:1.5deg;--pc:var(--acid)"><span class="tack" aria-hidden="true"></span>
+        <img src="img/b2/wall/sink.webp" alt="Un membre de l’équipe tout sourire à l’évier, derrière le bar" loading="lazy"><figcaption>la plonge. toujours le sourire.</figcaption></figure>
       <figure class="pin snap" style="--rot:-2deg;--pc:var(--marker)"><span class="tack" aria-hidden="true"></span>
         <img src="img/b2/wall/marble-cake.webp" alt="Des tranches de cake marbré dans la vitrine" loading="lazy"><figcaption>cake marbré. en tranches épaisses.</figcaption></figure>
+      <figure class="pin snap" style="--rot:2.2deg;--pc:var(--cobalt)"><span class="tack" aria-hidden="true"></span>
+        <div class="phone"><span class="live">en direct</span>
+          <video src="img/b2/live/granola-gold.mp4" poster="img/b2/live/granola-gold.webp" muted loop playsinline preload="none" aria-label="Vidéo : le granola Kurkuma Gold de très près"></video>
+          <button class="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9 H8 L13 5 V19 L8 15 H4 Z"/><path class="w1" d="M17 9.5 L21.5 14 M21.5 9.5 L17 14"/><path class="w2" d="M16.5 9 C18 10.5 18 13.5 16.5 15 M19 6.5 C22 9.5 22 14.5 19 17.5"/></svg><span class="w1">activer le son</span><span class="w2">couper le son</span></button></div>
+        <figcaption>du croquant, en or. le son, svp.</figcaption></figure>
       <a class="pin soc" href="https://www.facebook.com/cereallovers/" target="_blank" rel="noopener" style="--rot:1.5deg;--c:var(--beet);--pc:var(--cobalt)"><span class="tack" aria-hidden="true"></span>
         <svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="5" width="30" height="30" rx="9"/><path d="M23 35 V17 C23 13.4 25 11.6 28.6 11.6 M18 21.5 H28"/></svg><span><b>Facebook</b><span>Cereal Lovers &#8599;</span></span></a>
     </div>
@@ -1005,7 +1035,8 @@ h2{font-size:clamp(44px,7.4vw,108px)}
       </div>
       <figure class="snap gr-four" style="margin:0"><span class="tape" aria-hidden="true"></span><span class="tape r" aria-hidden="true"></span>
         <img src="img/b2/g-four.webp" alt="Les quatre bocaux de granola côte à côte sur le comptoir : Green Silk, Deep Choc, Kurkuma Gold, Pink Beat" loading="lazy">
-        <figcaption>toute la collection, sur le comptoir, cette semaine</figcaption>
+        <figcaption>toute la collection, sur le comptoir, tout l’hiver</figcaption>
+        <p class="gift">le cadeau qui ne finit pas dans un tiroir.<small>quatre bocaux, sur le comptoir, Place du Th&#233;&#226;tre</small></p>
         <svg class="sc dr sp2" viewBox="0 0 200 200" aria-hidden="true"><path pathLength="1" d="M100 100 c 10 -5 20 5 15 15 c -6 14 -28 10 -30 -6 c -3 -22 26 -34 44 -20 c 22 17 12 52 -14 58 c -32 8 -58 -22 -48 -52 c 12 -36 58 -46 86 -20"/></svg>
       </figure>
     </div>
@@ -1029,7 +1060,7 @@ h2{font-size:clamp(44px,7.4vw,108px)}
     </article>
     <article class="jar" style="--c:#8dc15b;--lr:1.2deg">
       <div>
-        <div class="lbl"><span class="newtag">nouveau en octobre</span>
+        <div class="lbl"><span class="newtag">le petit nouveau</span>
           <div class="lt"><span class="logo-l" role="img" aria-label="Cereal Lovers, The Epicurean Collection"></span>
             <p class="notes">notes : matcha,<br>noix de coco,<br>citron, sésame.</p></div>
           <div class="band"><span class="vh">N°2</span><span class="mg g-n2" aria-hidden="true"></span>
@@ -1232,7 +1263,7 @@ h2{font-size:clamp(44px,7.4vw,108px)}
 <section id="town" data-k="6" data-name="en ville">
   <span class="dots" aria-hidden="true"></span>
   <div class="wrap">
-    <p class="eye">EN VILLE &#183; LUXEMBOURG &#183; 2027</p>
+    <p class="eye">EN VILLE &#183; LUXEMBOURG &#183; 2026&#8211;27</p>
     <div class="tw-head"><h2>Les grands jours<br>en ville.</h2>
       <p class="hand">la Place du Théâtre est à deux pas de tout.<br>passez entre deux boutiques.</p></div>
     <div class="town" id="town-list"></div>
@@ -1477,6 +1508,7 @@ h2{font-size:clamp(44px,7.4vw,108px)}
   /* ---------- the data: courses.json is the only thing to edit ---------- */
   var DATA = null, TODAY = new Date(); TODAY.setHours(0,0,0,0);
   function day(s){ var a = String(s).split('-').map(Number); return new Date(a[0],a[1]-1,a[2]); }
+  untilCards();   // runs before courses.json arrives, so a stale card never shows
   var MON = T.MON, WD = T.WD;
   function span(s){
     var a = day(s.start), b = s.end ? day(s.end) : a, same = +a === +b;
@@ -1574,6 +1606,15 @@ h2{font-size:clamp(44px,7.4vw,108px)}
 
     watch($('#doorList'));
     renderTown();
+  }
+
+  /* ---------- news cards with data-until leave the day after ---------- */
+  function untilCards(){
+    document.querySelectorAll('[data-until]').forEach(function(c){
+      if(day(c.getAttribute('data-until')) >= TODAY) return;
+      if(c.classList.contains('ex-c')) c.parentNode.classList.add('no-ex');
+      c.remove();
+    });
   }
 
   /* ---------- the city's big days: past ones drop off by themselves ---------- */

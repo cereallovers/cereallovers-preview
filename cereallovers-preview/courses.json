@@ -1,6 +1,6 @@
 {
   "_read_me": "This one file feeds the courses and the city dates on the site. A text can be one line for both languages, or {\"en\": \"...\", \"fr\": \"...\"}. Dates in YYYY-MM-DD. A session closes by itself on the day it starts (it leaves the list, and the 'updated' stamp moves to that day); add \"closed\": true to close one earlier, for example when it is full. A city event disappears the day after its last date. Change 'updated' whenever you edit. Prices only show when show_prices is true. A course with \"direct\": true is booked on its own site (book.url), so it gets no 'send me info' button.",
-  "updated": "2026-10-17",
+  "updated": "2026-10-29",
   "show_prices": false,
   "signup": {
     "endpoint": "",
@@ -268,7 +268,8 @@
         "fr": "session en groupe ouvert"
       },
       "seats": "",
-      "price": ""
+      "price": "",
+      "closed": true
     },
     {
       "course": "hobby",
@@ -311,11 +312,38 @@
   ],
   "city": {
     "source": {
-      "en": "Cityshopping Luxembourg, 2027 commercial calendar",
-      "fr": "Cityshopping Luxembourg, calendrier commercial 2027"
+      "en": "Cityshopping Luxembourg and the City of Luxembourg, 2026–27",
+      "fr": "Cityshopping Luxembourg et la Ville de Luxembourg, 2026–27"
     }
   },
   "events": [
+    {
+      "name": "Winterlights",
+      "start": "2026-11-20",
+      "end": "2027-01-03",
+      "note": {
+        "en": "lights on. hot choc on.",
+        "fr": "lumières allumées. chocolat chaud aussi."
+      }
+    },
+    {
+      "name": "Black Friday",
+      "start": "2026-11-27",
+      "end": "",
+      "note": {
+        "en": "black friday? black coffee.",
+        "fr": "black friday ? café noir."
+      }
+    },
+    {
+      "name": "Kleeschen",
+      "start": "2026-12-06",
+      "end": "",
+      "note": {
+        "en": "a granola jar fits in a boot.",
+        "fr": "un pot de granola, ça rentre dans une botte."
+      }
+    },
     {
       "name": {
         "en": "Winter sales",
@@ -392,24 +420,6 @@
       "note": {
         "en": "coat on. coffee in hand.",
         "fr": "manteau sur le dos. café à la main."
-      }
-    },
-    {
-      "name": "Winterlights",
-      "start": "2027-11-19",
-      "end": "2028-01-02",
-      "note": {
-        "en": "lights on. hot choc on.",
-        "fr": "lumières allumées. chocolat chaud aussi."
-      }
-    },
-    {
-      "name": "Black Friday",
-      "start": "2027-11-26",
-      "end": "",
-      "note": {
-        "en": "black friday? black coffee.",
-        "fr": "black friday ? café noir."
       }
     }
   ]
