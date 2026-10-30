@@ -1,6 +1,6 @@
 {
   "_read_me": "This one file feeds the courses and the city dates on the site. A text can be one line for both languages, or {\"en\": \"...\", \"fr\": \"...\"}. Dates in YYYY-MM-DD. A session closes by itself on the day it starts (it leaves the list, and the 'updated' stamp moves to that day); add \"closed\": true to close one earlier, for example when it is full. A city event disappears the day after its last date. Change 'updated' whenever you edit. Prices only show when show_prices is true. A course with \"direct\": true is booked on its own site (book.url), so it gets no 'send me info' button.",
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "show_prices": false,
   "signup": {
     "endpoint": "",
@@ -291,6 +291,19 @@
       "price": "175 €"
     },
     {
+      "course": "pro",
+      "start": "2026-12-07",
+      "end": "2026-12-08",
+      "time": "09:00–12:00",
+      "where": "Chambre de Commerce + Cereal Lovers",
+      "note": {
+        "en": "open group session",
+        "fr": "session en groupe ouvert"
+      },
+      "seats": "",
+      "price": ""
+    },
+    {
       "course": "hobby",
       "start": "2026-12-19",
       "end": "",
@@ -308,6 +321,149 @@
         "fr": "places limitées"
       },
       "price": "175 €"
+    },
+    {
+      "course": "pro",
+      "start": "2027-01-18",
+      "end": "2027-01-19",
+      "time": "09:00–12:00",
+      "where": "Chambre de Commerce + Cereal Lovers",
+      "note": {
+        "en": "open group session",
+        "fr": "session en groupe ouvert"
+      },
+      "seats": "",
+      "price": ""
+    },
+    {
+      "course": "pro",
+      "start": "2027-02-22",
+      "end": "2027-02-23",
+      "time": "09:00–12:00",
+      "where": "Chambre de Commerce + Cereal Lovers",
+      "note": {
+        "en": "open group session",
+        "fr": "session en groupe ouvert"
+      },
+      "seats": "",
+      "price": ""
+    },
+    {
+      "course": "pro",
+      "start": "2027-03-15",
+      "end": "2027-03-16",
+      "time": "09:00–12:00",
+      "where": "Chambre de Commerce + Cereal Lovers",
+      "note": {
+        "en": "open group session",
+        "fr": "session en groupe ouvert"
+      },
+      "seats": "",
+      "price": ""
+    },
+    {
+      "course": "pro",
+      "start": "2027-04-05",
+      "end": "2027-04-06",
+      "time": "09:00–12:00",
+      "where": "Chambre de Commerce + Cereal Lovers",
+      "note": {
+        "en": "open group session",
+        "fr": "session en groupe ouvert"
+      },
+      "seats": "",
+      "price": ""
+    },
+    {
+      "course": "pro",
+      "start": "2027-05-24",
+      "end": "2027-05-25",
+      "time": "09:00–12:00",
+      "where": "Chambre de Commerce + Cereal Lovers",
+      "note": {
+        "en": "open group session",
+        "fr": "session en groupe ouvert"
+      },
+      "seats": "",
+      "price": ""
+    },
+    {
+      "course": "pro",
+      "start": "2027-06-14",
+      "end": "2027-06-15",
+      "time": "09:00–12:00",
+      "where": "Chambre de Commerce + Cereal Lovers",
+      "note": {
+        "en": "open group session",
+        "fr": "session en groupe ouvert"
+      },
+      "seats": "",
+      "price": ""
+    },
+    {
+      "course": "pro",
+      "start": "2027-07-05",
+      "end": "2027-07-06",
+      "time": "09:00–12:00",
+      "where": "Chambre de Commerce + Cereal Lovers",
+      "note": {
+        "en": "open group session",
+        "fr": "session en groupe ouvert"
+      },
+      "seats": "",
+      "price": ""
+    },
+    {
+      "course": "pro",
+      "start": "2027-08-02",
+      "end": "2027-08-03",
+      "time": "09:00–12:00",
+      "where": "Chambre de Commerce + Cereal Lovers",
+      "note": {
+        "en": "open group session",
+        "fr": "session en groupe ouvert"
+      },
+      "seats": "",
+      "price": ""
+    },
+    {
+      "course": "pro",
+      "start": "2027-10-04",
+      "end": "2027-10-05",
+      "time": "09:00–12:00",
+      "where": "Chambre de Commerce + Cereal Lovers",
+      "note": {
+        "en": "open group session",
+        "fr": "session en groupe ouvert"
+      },
+      "seats": "",
+      "price": ""
+    },
+    {
+      "course": "pro",
+      "start": "2027-11-15",
+      "end": "2027-11-16",
+      "time": "09:00–12:00",
+      "where": "Chambre de Commerce + Cereal Lovers",
+      "note": {
+        "en": "open group session",
+        "fr": "session en groupe ouvert"
+      },
+      "seats": "",
+      "price": ""
+    },
+    {
+      "course": "pro",
+      "start": "2027-12-06",
+      "end": "2027-12-07",
+      "time": "09:00–12:00",
+      "where": "Chambre de Commerce + Cereal Lovers",
+      "note": {
+        "en": "open group session",
+        "fr": "session en groupe ouvert"
+      },
+      "seats": "",
+      "price": ""
     }
   ],
   "city": {

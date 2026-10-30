@@ -1523,6 +1523,8 @@ h2{font-size:clamp(44px,7.4vw,108px)}
     return (DATA.sessions||[]).filter(open)
       .sort(function(a,b){ return day(a.start) - day(b.start); });
   }
+  // the board shows the next few sessions only; later dates move up as these pass (the full list stays in courses.json)
+  var BOARD_MAX = 5;
   function course(id){ return (DATA && DATA.courses || []).filter(function(c){ return c.id===id; })[0] || {name:id,colour:'#fff'}; }
   // "direct": the course is booked on another site (the professional course, through House of Training), so no info button
   function direct(c){ var b = c && c.book; return !!(c && c.direct && b && L(b.url)); }
@@ -1575,7 +1577,7 @@ h2{font-size:clamp(44px,7.4vw,108px)}
 
     /* the board */
     var showP = !!DATA.show_prices;
-    $('#board').innerHTML = up.length ? up.map(function(s){
+    $('#board').innerHTML = up.length ? up.slice(0, BOARD_MAX).map(function(s){
       var c = course(s.course), sp = span(s);
       return '<div class="row" style="--c:'+esc(c.colour)+'">'
         + '<div class="d">'+esc(sp.big)+'<small>'+esc(sp.small)+'</small></div>'
