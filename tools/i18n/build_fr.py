@@ -305,6 +305,7 @@ FR = [
   ("<p class=\"hand\">the Barista Academy goes on tour. come and pour with us. it's going to be SO good.</p>",
    '<p class="hand">la Barista Academy part en tournée. venez verser avec nous. ça va être TROP bien.</p>'),
   ('>The Barista Academy &#8594;</a>', '>La Barista Academy &#8594;</a>'),
+  ('>The Barista Academy page &#8599;</a>', '>La page Barista Academy &#8599;</a>'),
   ('alt="QR code to the Barista Academy page"', 'alt="QR code vers la page de la Barista Academy"'),
   ('<figcaption>scan me</figcaption>', '<figcaption>scannez-moi</figcaption>'),
   ('<p class="eye">BAGEL OF THE MONTH</p>', '<p class="eye">LE BAGEL DU MOIS</p>'),
