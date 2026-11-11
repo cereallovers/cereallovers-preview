@@ -76,7 +76,7 @@ FR = [
   ('no date that works? every level runs privately, any day of the year.', 'aucune date ne vous va ? chaque niveau existe aussi en privé, n’importe quel jour de l’année.'),
   ('>pick a date with us</button>', '>choisir une date avec nous</button>'),
   # atelier
-  ('THE ROOM &#183; OUR ATELIER', 'LA SALLE &#183; NOTRE ATELIER'),
+  ('THE ROOM &#183; OUR ATELIER IN BEGGEN', 'LA SALLE &#183; NOTRE ATELIER DE BEGGEN'),
   ('<h3>Not a classroom.<br>A working <span class="ring">bar.', '<h3>Pas une salle de classe.<br>Un vrai <span class="ring">bar.'),
   ('Proper espresso machines, grinders you can actually dial in, scales, a cupping table, and enough space that everybody gets their hands on the equipment instead of watching over a shoulder.',
    'De vraies machines à espresso, des moulins qu’on peut vraiment régler, des balances, une table de cupping, et assez de place pour que chacun ait les mains sur le matériel au lieu de regarder par-dessus une épaule.'),
@@ -263,7 +263,8 @@ FR = [
   # visit
   ('<span class="vh">Visit</span><span class="mg g-vis"', '<span class="vh">Visite</span><span class="mg g-visite"'),
   ('<h2>Come<br>and sit.</h2>', '<h2>Venez<br>vous asseoir.</h2>'),
-  ('THE SHOP &#183; CAPUCINS &#183; BREAKFAST, COFFEE, HOBBY WORKSHOPS', 'LA BOUTIQUE &#183; CAPUCINS &#183; PETIT-DÉJ, CAFÉ, ATELIERS HOBBY'),
+  ('THE SHOP &#183; CAPUCINS &#183; BREAKFAST, COFFEE, GRANOLA', 'LA BOUTIQUE &#183; CAPUCINS &#183; PETIT-DÉJ, CAFÉ, GRANOLA'),
+  ('THE ATELIER &#183; BEGGEN &#183; ALL OUR COURSES', 'L’ATELIER &#183; BEGGEN &#183; TOUTES NOS FORMATIONS'),
   ('alt="The wall: granola jars and coffee bags on the shelves"', 'alt="Le mur : bocaux de granola et sachets de café sur les étagères"'),
   ('alt="The striped ceiling over the shelving"', 'alt="Le plafond rayé au-dessus des étagères"'),
   ('<figcaption>the ceiling is not an accident</figcaption>', '<figcaption>le plafond n’est pas un hasard</figcaption>'),

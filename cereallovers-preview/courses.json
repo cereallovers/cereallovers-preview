@@ -1,6 +1,6 @@
 {
   "_read_me": "This one file feeds the courses and the city dates on the site. A text can be one line for both languages, or {\"en\": \"...\", \"fr\": \"...\"}. Dates in YYYY-MM-DD. A session closes by itself on the day it starts (it leaves the list, and the 'updated' stamp moves to that day); add \"closed\": true to close one earlier, for example when it is full. A city event disappears the day after its last date. Change 'updated' whenever you edit. Prices only show when show_prices is true. A course with \"direct\": true is booked on its own site (book.url), so it gets no 'send me info' button.",
-  "updated": "2026-10-30",
+  "updated": "2026-11-11",
   "show_prices": false,
   "signup": {
     "endpoint": "",
@@ -42,13 +42,13 @@
         "en": [
           "one Saturday morning",
           "09:30 to 12:30",
-          "at the shop, Place du Théâtre",
+          "at our atelier in Beggen",
           "no prerequisites"
         ],
         "fr": [
           "un samedi matin",
           "09:30 à 12:30",
-          "à la boutique, Place du Théâtre",
+          "à notre atelier de Beggen",
           "aucun prérequis"
         ]
       },
@@ -104,7 +104,7 @@
       "learn": {
         "en": [
           "morning one: theory at the Chambre de Commerce",
-          "morning two: hands on our machines",
+          "morning two: hands on our machines, in Beggen",
           "origins, processing, roasting, single origin or blend",
           "taste wheel and cupping",
           "extraction, grind, milk, latte art",
@@ -112,7 +112,7 @@
         ],
         "fr": [
           "matinée un : la théorie à la Chambre de Commerce",
-          "matinée deux : les mains sur nos machines",
+          "matinée deux : les mains sur nos machines, à Beggen",
           "origines, traitement, torréfaction, pure origine ou assemblage",
           "roue des arômes et cupping",
           "extraction, mouture, lait, latte art",
@@ -151,13 +151,13 @@
         "en": [
           "private booking only",
           "any date you choose",
-          "at our atelier or on your machine",
+          "at our atelier in Beggen or on your machine",
           "for people already behind a bar"
         ],
         "fr": [
           "uniquement en privé",
           "la date de votre choix",
-          "dans notre atelier ou sur votre machine",
+          "dans notre atelier de Beggen ou sur votre machine",
           "pour ceux qui sont déjà derrière un bar"
         ]
       },
@@ -202,13 +202,13 @@
         "en": [
           "small to large groups",
           "90 minutes to a half day",
-          "at our atelier or at your office",
+          "at our atelier in Beggen or at your office",
           "HORECA staff trained on your own equipment"
         ],
         "fr": [
           "petits et grands groupes",
           "de 90 minutes à une demi-journée",
-          "dans notre atelier ou dans vos bureaux",
+          "dans notre atelier de Beggen ou dans vos bureaux",
           "équipes HORECA formées sur votre propre matériel"
         ]
       },
@@ -244,8 +244,8 @@
       "end": "",
       "time": "09:30–12:30",
       "where": {
-        "en": "The shop · Place du Théâtre",
-        "fr": "La boutique · Place du Théâtre"
+        "en": "Our atelier · 1–5 rue de Neuerburg, Beggen",
+        "fr": "Notre atelier · 1–5 rue de Neuerburg, Beggen"
       },
       "note": {
         "en": "espresso or latte art, you choose",
@@ -262,7 +262,10 @@
       "start": "2026-11-02",
       "end": "2026-11-03",
       "time": "09:00–12:00",
-      "where": "Chambre de Commerce + Cereal Lovers",
+      "where": {
+        "en": "Chambre de Commerce + our atelier in Beggen",
+        "fr": "Chambre de Commerce + notre atelier de Beggen"
+      },
       "note": {
         "en": "open group session",
         "fr": "session en groupe ouvert"
@@ -277,8 +280,8 @@
       "end": "",
       "time": "09:30–12:30",
       "where": {
-        "en": "The shop · Place du Théâtre",
-        "fr": "La boutique · Place du Théâtre"
+        "en": "Our atelier · 1–5 rue de Neuerburg, Beggen",
+        "fr": "Notre atelier · 1–5 rue de Neuerburg, Beggen"
       },
       "note": {
         "en": "espresso or latte art, you choose",
@@ -295,7 +298,10 @@
       "start": "2026-12-07",
       "end": "2026-12-08",
       "time": "09:00–12:00",
-      "where": "Chambre de Commerce + Cereal Lovers",
+      "where": {
+        "en": "Chambre de Commerce + our atelier in Beggen",
+        "fr": "Chambre de Commerce + notre atelier de Beggen"
+      },
       "note": {
         "en": "open group session",
         "fr": "session en groupe ouvert"
@@ -309,8 +315,8 @@
       "end": "",
       "time": "09:30–12:30",
       "where": {
-        "en": "The shop · Place du Théâtre",
-        "fr": "La boutique · Place du Théâtre"
+        "en": "Our atelier · 1–5 rue de Neuerburg, Beggen",
+        "fr": "Notre atelier · 1–5 rue de Neuerburg, Beggen"
       },
       "note": {
         "en": "espresso or latte art, you choose",
@@ -327,7 +333,10 @@
       "start": "2027-01-18",
       "end": "2027-01-19",
       "time": "09:00–12:00",
-      "where": "Chambre de Commerce + Cereal Lovers",
+      "where": {
+        "en": "Chambre de Commerce + our atelier in Beggen",
+        "fr": "Chambre de Commerce + notre atelier de Beggen"
+      },
       "note": {
         "en": "open group session",
         "fr": "session en groupe ouvert"
@@ -340,7 +349,10 @@
       "start": "2027-02-22",
       "end": "2027-02-23",
       "time": "09:00–12:00",
-      "where": "Chambre de Commerce + Cereal Lovers",
+      "where": {
+        "en": "Chambre de Commerce + our atelier in Beggen",
+        "fr": "Chambre de Commerce + notre atelier de Beggen"
+      },
       "note": {
         "en": "open group session",
         "fr": "session en groupe ouvert"
@@ -353,7 +365,10 @@
       "start": "2027-03-15",
       "end": "2027-03-16",
       "time": "09:00–12:00",
-      "where": "Chambre de Commerce + Cereal Lovers",
+      "where": {
+        "en": "Chambre de Commerce + our atelier in Beggen",
+        "fr": "Chambre de Commerce + notre atelier de Beggen"
+      },
       "note": {
         "en": "open group session",
         "fr": "session en groupe ouvert"
@@ -366,7 +381,10 @@
       "start": "2027-04-05",
       "end": "2027-04-06",
       "time": "09:00–12:00",
-      "where": "Chambre de Commerce + Cereal Lovers",
+      "where": {
+        "en": "Chambre de Commerce + our atelier in Beggen",
+        "fr": "Chambre de Commerce + notre atelier de Beggen"
+      },
       "note": {
         "en": "open group session",
         "fr": "session en groupe ouvert"
@@ -379,7 +397,10 @@
       "start": "2027-05-24",
       "end": "2027-05-25",
       "time": "09:00–12:00",
-      "where": "Chambre de Commerce + Cereal Lovers",
+      "where": {
+        "en": "Chambre de Commerce + our atelier in Beggen",
+        "fr": "Chambre de Commerce + notre atelier de Beggen"
+      },
       "note": {
         "en": "open group session",
         "fr": "session en groupe ouvert"
@@ -392,7 +413,10 @@
       "start": "2027-06-14",
       "end": "2027-06-15",
       "time": "09:00–12:00",
-      "where": "Chambre de Commerce + Cereal Lovers",
+      "where": {
+        "en": "Chambre de Commerce + our atelier in Beggen",
+        "fr": "Chambre de Commerce + notre atelier de Beggen"
+      },
       "note": {
         "en": "open group session",
         "fr": "session en groupe ouvert"
@@ -405,7 +429,10 @@
       "start": "2027-07-05",
       "end": "2027-07-06",
       "time": "09:00–12:00",
-      "where": "Chambre de Commerce + Cereal Lovers",
+      "where": {
+        "en": "Chambre de Commerce + our atelier in Beggen",
+        "fr": "Chambre de Commerce + notre atelier de Beggen"
+      },
       "note": {
         "en": "open group session",
         "fr": "session en groupe ouvert"
@@ -418,7 +445,10 @@
       "start": "2027-08-02",
       "end": "2027-08-03",
       "time": "09:00–12:00",
-      "where": "Chambre de Commerce + Cereal Lovers",
+      "where": {
+        "en": "Chambre de Commerce + our atelier in Beggen",
+        "fr": "Chambre de Commerce + notre atelier de Beggen"
+      },
       "note": {
         "en": "open group session",
         "fr": "session en groupe ouvert"
@@ -431,7 +461,10 @@
       "start": "2027-10-04",
       "end": "2027-10-05",
       "time": "09:00–12:00",
-      "where": "Chambre de Commerce + Cereal Lovers",
+      "where": {
+        "en": "Chambre de Commerce + our atelier in Beggen",
+        "fr": "Chambre de Commerce + notre atelier de Beggen"
+      },
       "note": {
         "en": "open group session",
         "fr": "session en groupe ouvert"
@@ -444,7 +477,10 @@
       "start": "2027-11-15",
       "end": "2027-11-16",
       "time": "09:00–12:00",
-      "where": "Chambre de Commerce + Cereal Lovers",
+      "where": {
+        "en": "Chambre de Commerce + our atelier in Beggen",
+        "fr": "Chambre de Commerce + notre atelier de Beggen"
+      },
       "note": {
         "en": "open group session",
         "fr": "session en groupe ouvert"
@@ -457,7 +493,10 @@
       "start": "2027-12-06",
       "end": "2027-12-07",
       "time": "09:00–12:00",
-      "where": "Chambre de Commerce + Cereal Lovers",
+      "where": {
+        "en": "Chambre de Commerce + our atelier in Beggen",
+        "fr": "Chambre de Commerce + notre atelier de Beggen"
+      },
       "note": {
         "en": "open group session",
         "fr": "session en groupe ouvert"
