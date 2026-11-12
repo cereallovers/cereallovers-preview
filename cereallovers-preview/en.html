@@ -605,6 +605,19 @@ h2{font-size:clamp(44px,7.4vw,108px)}
 .wal-ph img{width:100%;height:auto;rotate:-3deg;filter:drop-shadow(0 16px 14px rgba(0,0,0,.32));transition:rotate .3s, translate .3s}
 .wal-c:hover .wal-ph img{rotate:-1deg;translate:0 -6px}
 .wal-c .pen{margin-top:10px}
+/* bagel of the month, November 2026: the pastrami bagel taken apart, in three cut-out layers that spread on hover */
+.bag-c{container-type:inline-size;display:flow-root}
+.bag-c h3{font-size:min(56px,19cqi)}
+.bag-ph{position:relative;width:min(100% + 28px,350px);margin:4px -8px 10px -20px;rotate:-2deg;transition:rotate .3s}
+.bag-ph .stk{position:relative;width:60%;margin:0 0 0 auto;aspect-ratio:668/950}
+.bag-ph .stk img{position:absolute;inset:0;width:100%;height:100%;filter:drop-shadow(0 12px 10px rgba(0,0,0,.28));transition:translate .45s cubic-bezier(.2,1.6,.4,1)}
+.bag-c:hover .bag-ph{rotate:0deg}
+.bag-c:hover .bag-ph .l1{translate:0 -12px} .bag-c:hover .bag-ph .l2{translate:0 -5px} .bag-c:hover .bag-ph .l3{translate:0 6px}
+.bag-lb{list-style:none;margin:0;padding:0;position:absolute;inset:0;pointer-events:none}
+.bag-lb li{position:absolute;top:var(--y);right:60%;translate:0 -50%;padding-right:12px;white-space:nowrap;font-family:var(--pen);font-size:clamp(17px,8cqi,24px);line-height:1;color:var(--ink)}
+.bag-lb li::after{content:"";position:absolute;top:55%;right:-16px;width:24px;border-top:2px dashed var(--ink)}
+@container (min-width:440px){.bag-ph{float:right;width:min(58%,340px);margin:-70px -6px 4px 14px}}   /* wide card (after ExpoGast): bagel on the right, words beside it */
+@media (prefers-reduced-motion:reduce){.bag-ph,.bag-ph .stk img{transition:none}}
 @media (max-width:1100px){.nw{grid-template-columns:1fr 1fr;grid-template-areas:"ex ex" "bag psl" "hc wal"}.nw.no-ex{grid-template-areas:"bag psl" "hc wal"}}
 @media (max-width:1100px){.nc.hc{grid-template-columns:1fr}.hc-ph{min-height:0;aspect-ratio:1.3;border-right:0;border-bottom:2px solid var(--ink)}
   .hc-tx{padding:24px 18px 24px}.hc-back{width:92px;height:92px;font-size:11px;right:-8px;top:-24px}.hc-back i{font-size:16px}
@@ -758,11 +771,24 @@ h2{font-size:clamp(44px,7.4vw,108px)}
       </article>
       <article class="nc bag-c" style="--c:var(--marker);--rot:1.6deg">
         <span class="splat-host" data-seed="73" data-c="#e8ff3a" aria-hidden="true"></span>
+        <span class="sticker" style="background:var(--acid);color:var(--ink);rotate:-4deg">NOVEMBER</span>
         <p class="eye">BAGEL OF THE MONTH</p>
-        <h3>Tuna-<br>mayo.</h3>
-        <p class="hand">Steve, Sergio and Siggi, meet the new kid. tuna. mayo. a bagel. zero apologies.</p>
-        <p class="pen">only this month. then it swims away.</p>
-        <svg class="sc dr ic" viewBox="0 0 120 100" aria-hidden="true"><path pathLength="1" d="M 12 50 C 32 18 74 18 92 50 C 74 82 32 82 12 50 Z M 92 50 L 112 30 L 112 70 Z M 30 44 L 31 45" style="--s:var(--ink);--w:3"/></svg>
+        <h3>Pastrami.</h3>
+        <figure class="bag-ph">
+          <div class="stk">
+            <img class="l3" src="img/b2/news/pastrami-bagel-3-base.webp" alt="Our November bagel taken apart: sesame bagel, pastrami, honey mustard, tomato, cucumber" width="668" height="950" loading="lazy">
+            <img class="l2" src="img/b2/news/pastrami-bagel-2-pastrami.webp" alt="" width="668" height="950" loading="lazy">
+            <img class="l1" src="img/b2/news/pastrami-bagel-1-top.webp" alt="" width="668" height="950" loading="lazy">
+          </div>
+          <ul class="bag-lb">
+            <li style="--y:36%">pastrami</li>
+            <li style="--y:53%">honey mustard</li>
+            <li style="--y:65%">tomato</li>
+            <li style="--y:78%">cucumber</li>
+          </ul>
+        </figure>
+        <p class="hand">sweet, sharp, stacked sky-high. Steve, Sergio and Siggi: make room.</p>
+        <p class="pen">only in november. then poof.</p>
       </article>
       <article class="nc hc" style="--c:var(--ink);--rot:1deg">
         <span class="hc-back" aria-hidden="true">BACK<br>FOR<br>WINTER<i>finally.</i></span>
@@ -1161,7 +1187,7 @@ h2{font-size:clamp(44px,7.4vw,108px)}
           <img class="cut b2" src="img/b2/eat/bagel-vegan.webp" alt="Vegan bagel with cucumber, radish and salad" loading="lazy">
           <span class="tag tr">regular</span><span class="tag tv">vegan</span></div>
         <h3>Bagels</h3>
-        <ul class="menu"><li><b>Steve</b><span>cream cheese, tomato, cucumber</span></li><li><b>Sergio</b><span>+ ham, basil</span></li><li><b>Siggi</b><span>+ smoked salmon, dill</span></li><li class="vg"><b>Sam</b><span>hummus, onion, pepper</span></li><li class="vg"><b>Simon</b><span>vegan cream cheese</span></li><li class="vg"><b>Spencer</b><span>+ smoked tofu</span></li><li class="vg"><b>Sophie</b><span>vegan or regular cream cheese</span></li><li class="month"><b>Bagel of the month</b><span>tuna-mayo</span></li></ul>
+        <ul class="menu"><li><b>Steve</b><span>cream cheese, tomato, cucumber</span></li><li><b>Sergio</b><span>+ ham, basil</span></li><li><b>Siggi</b><span>+ smoked salmon, dill</span></li><li class="vg"><b>Sam</b><span>hummus, onion, pepper</span></li><li class="vg"><b>Simon</b><span>vegan cream cheese</span></li><li class="vg"><b>Spencer</b><span>+ smoked tofu</span></li><li class="vg"><b>Sophie</b><span>vegan or regular cream cheese</span></li><li class="month"><b>Bagel of the month</b><span>pastrami, honey mustard, cucumber, tomato</span></li></ul>
       </article>
       <article class="eatc">
         <div class="eat-pics"><span class="splat-host" data-seed="33" data-c="#e8ff3a" aria-hidden="true"></span><span class="splat-host" data-seed="58" data-c="#5fc5bf" aria-hidden="true"></span>
