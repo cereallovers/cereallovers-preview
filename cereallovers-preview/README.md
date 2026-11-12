@@ -27,7 +27,11 @@
 > Same round: **The wall** (after the atelier) shows the team, two short videos with sound on tap
 > (`img/b2/live/`), the clients' pin wall ("tag @cerealloves") and the Instagram and Facebook links, which are
 > also in the footer. The professional course links straight to its House of Training page (FR or EN) instead of
-> a "send me info" button. No machine brand and no second address anywhere on the site.
+> a "send me info" button. No machine brand anywhere on the site.
+>
+> **Two addresses, on purpose (since 11 Nov 2026).** The café is at 11C Place du Théâtre. All the courses take place
+> at the atelier, 1–5 rue de Neuerburg, L-2215 Luxembourg (Beggen): the `"where"` lines in `courses.json`, the atelier
+> label and the Visit section say so. Keep both; do not fold them back into one.
 >
 > Also: **café sound**. The "café sound" button (bottom left) plays `snd/cafe.m4a`, a 30-second murmur loop recorded in
 > the shop, muffled so no words can be made out. It only starts when someone taps it. **Visit** has the walk-in video
