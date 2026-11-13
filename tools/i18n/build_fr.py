@@ -288,7 +288,9 @@ FR = [
   ('<p class="hand">what you need to know. right now.</p>', '<p class="hand">ce qu’il faut savoir. tout de suite.</p>'),
   # hot chocolate, back for winter (14 Oct 2026)
   ('<span class="hc-back" aria-hidden="true">BACK<br>FOR<br>WINTER<i>finally.</i></span>', '<span class="hc-back" aria-hidden="true">DE<br>RETOUR<br>CET HIVER<i>enfin.</i></span>'),
-  ('alt="Hot chocolate poured over whipped cream in our mint cup"', 'alt="Du chocolat chaud versé sur la chantilly, dans notre tasse menthe"'),
+  ('alt="Our pistachio hot chocolate, whipped cream and crushed pistachios, in the mug we serve it in"',
+   'alt="Notre chocolat chaud pistache, chantilly et pistaches concassées, dans la tasse où on le sert"'),
+  ('<i class="sp">winter special</i>', '<i class="sp">spécial hiver</i>'),
   ('<p class="hc-cream">whipped cream?<br>obviously.</p>', '<p class="hc-cream">chantilly ?<br>évidemment.</p>'),
   ('<p class="eye">THE WINTER MENU</p>', '<p class="eye">LA CARTE D’HIVER</p>'),
   ('<h3 class="hc-h">Hot<br><span class="mark">chocolate.<svg', '<h3 class="hc-h">Chocolat<br><span class="mark">chaud.<svg'),
