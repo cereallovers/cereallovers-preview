@@ -1813,6 +1813,10 @@ h2{font-size:clamp(44px,7.4vw,108px)}
     ticking = false;
     var doc = document.scrollingElement || document.documentElement;
     var prog = doc.scrollTop / Math.max(1, doc.scrollHeight - doc.clientHeight);
+    // read the section positions first, before the spine writes its styles: reading after writing
+    // forced the phone to redo the whole layout on every scroll frame
+    var mid = window.innerHeight*.4, at = secs[0];
+    secs.forEach(function(s){ if(s.getBoundingClientRect().top <= mid) at = s; });
     if(!rm){
       var pageH = Math.max(1, doc.scrollHeight);
       spine.forEach(function(p){
@@ -1826,8 +1830,6 @@ h2{font-size:clamp(44px,7.4vw,108px)}
       if(!animating){ animating = true; requestAnimationFrame(glide); }
       paintBands();
     }
-    var mid = window.innerHeight*.4, at = secs[0];
-    secs.forEach(function(s){ if(s.getBoundingClientRect().top <= mid) at = s; });
     var k = at.dataset.k + at.dataset.name; curId = at.id;
     if(k !== cur){
       cur = k;
